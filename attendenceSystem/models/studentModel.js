@@ -16,10 +16,9 @@ points
 const StudentSchema = Schema ({
   first_name: {type: String, required: true, maxLength: 100 },
   last_name: {type: String, required: true, maxLength: 100 },
-  class_id: {type: Schema.Types.ObjectId, ref: "Class"},
+  class_id: {type: Schema.Types.ObjectId, ref: "Class", required: true},
   grade: {type: Number, required: true},
-  email: {type: String, required: true},
-  password:{ type: String, required: true},
+  password:{ type: String},
   points: {type: Number},
 })
 
