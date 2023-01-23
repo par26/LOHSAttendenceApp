@@ -26,7 +26,7 @@ exports.class_create_get = (req, res) => {
 /*Handles the create class form*/
 exports.class_create_post = (req, res) => {
   //creates a new document for the class
-  record = new Class({ class_name: res.body.name, admin: req.adminId });
+  var record = new Class({ class_name: res.body.name, admin: req.adminId });
   try {
     const classModel = await Class.create(record);
   } catch (error) {

@@ -1,28 +1,25 @@
 const Class = require(".../models/classModel.js")
-const Student = require(".../models/studentModel.js")
+const Admin = require(".../models/adminModel.js")
 
 
 
-
-
-
-
-function findStudent(userFirstName, userLastName, userPassword) {
-  //query the student list to find student
-  const query = async Student.find({ first_name: userFirstName, last_name:       
-  userLastName});
-  //check if the selected querie's password is the same as the user's inpu
-
-  query.exec(function (err, student) {
-    if (err) return next(err);
-    
-    else if(student.password != userPassword) {
-    //log the error to the user
-    } else {
-      console.log("%s %s grade is: %s", student.first_name, student.last_name,
-      student.grade)
-    }
-  });
-  
+exports.login_get = (req, res) => {
+  //render the login page
+  res.render('login', { title: "login" });
 }
+
+
+exports.login_post = (req, res) => {
+  //find the user by their email
+  var admin = Admin.findOne({ email: req.body.email });
+
+  if (student.password != req.body.password) {
+    res.send({ success: false, message: "Wrong password" });
+
+  } else {
+    //redirct the user to the admin's url
+    res.redirect(admin.url);
+  }
+}
+
 
