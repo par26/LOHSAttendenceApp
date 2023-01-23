@@ -13,7 +13,7 @@ exports.login_post = (req, res) => {
   //find the user by their email
   var admin = Admin.findOne({ email: req.body.email });
 
-  if (student.password != req.body.password) {
+  if (admin.password != req.body.password) {
     res.send({ success: false, message: "Wrong password" });
 
   } else {
