@@ -30,10 +30,10 @@ You can use the account test@gmail.com with the password 123.
 
 # Libaries Used
 # Express JS
-Used for routing the general sever of the program
+Used for rendering and routing the website
 
 # Mongoose
-Used for obtaining and retriving the data from the MongoDB database
+Mongoose was used to write and retrive the data from the MongoDB database
 
 # PUG
-Used for templating for frontend
+Used for templating the frontend web pages
