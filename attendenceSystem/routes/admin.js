@@ -1,25 +1,37 @@
 const express = require("express");
 const router = express.Router();
 
-const class_controller = require("...controllers/classController");
-const student_controller = require("...controllers/studentController");
-
+const event_controller = require('/home/runner/LOHSAttendenceApp/attendenceSystem/controllers/eventController');
+const student_controller = require('/home/runner/LOHSAttendenceApp/attendenceSystem/controllers/studentController');
+const admin_controller = require('/home/runner/LOHSAttendenceApp/attendenceSystem/controllers/adminController');
+const report_controller = require('/home/runner/LOHSAttendenceApp/attendenceSystem/controllers/reportController');
 
 
 //presents a defualt page for the admin
+router.get("/", admin_controller.admin_Index);
 
 
 //lists the students in the class
-router.get("/:adminId/class/:id", class_controller.class_list);
-//route for creating a class
-router.get("/:adminId/classCreate/", class_controller.class_create_get);
-//routes for handeling the creation of class
-router.post("/:adminId/classCreate/", class_controller.class_create_post);
-//route for getting a detailed view of student
-router.get("/:adminID/student/:id", student_controller.student_get);
-//route for recieving the sudent create page
-router.get("/:adminID/createStudent/", student_controller.student_create_get); 
-//route for proccessing the sudent create page
-router.post("/:adminID/createStudent/", student_controller.student_create_post);
+router.get("/leaderboard", event_controller.class_leaderboard);
 
+//route for recieving the sudent create page
+router.get("/createStudent", student_controller.student_admin_create_get);
+//route for proccessing the sudent create page
+router.post("/createStudent", student_controller.student_admin_create_post);
+
+//GET route for creating an event
+router.get("/createEvent", event_controller.class_event_create_get);
+//POST route for creating an event
+router.post("/createEvent", event_controller.class_event_create_post);
+
+
+//GET Route for generating report
+router.get("/generateReport", report_controller.generate_report_get);
+
+//GET route for help menu
+router.get('/helpMenu', function(req, res, next) {
+  res.render('helpMenu');
+});
+
+module.exports = router;
 

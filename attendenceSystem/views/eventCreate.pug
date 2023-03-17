@@ -1,0 +1,58 @@
+extends layout
+
+
+
+block content
+  h1.eventCreated Create Event
+
+
+
+  form.eventCreated(action="/admin/createEvent", method='POST')
+
+    label(for = "eventName") Event Name:
+    input(type="text", name="name", value=name, placeholder = 'Enter the event name')
+    br
+    label(for="description") Event Description:
+    br
+    textArea(name="description", cols="20", rows="10")
+    br
+    label(for = "points") Points:
+    input(type="number", name="points", value=point, placeholder = 'Enter the number of points')
+    br
+    label(for = "startTime") Select the Start Time of the Event:
+    input(type="time", name="startTime", value="startTime")
+    br
+    label(for="endTime") Select the Ending Time of the Event:
+    input(type="time", name="endTime", value="endTime")
+    br
+    label(for="eventType") Event Type:
+    br
+    select(name="eventType")
+        option Sporting
+        option Non-Sporting
+
+    .eventCreated
+      if students
+          h2 Mark Attendance:          
+              table.eventCreated
+                thead.eventCreated
+                  th.eventCreated First Name
+                  th.eventCreated Last Name
+                  th.eventCreated Grade
+                  th.eventCreated Points
+                  th.eventCreated Select
+                tbody.eventCreated
+                  each student in students
+                    tr.eventCreated
+                      td.eventCreated= student.first_name
+                      td.eventCreated= student.last_name
+                      td.eventCreated= student.grade
+                      td.eventCreated= student.points         
+                      td.eventCreated
+                        input(type='checkbox', id=student._id, name=`student`, value=student._id)
+      br
+      //submit button
+      button.btn.btn-secondary(type='submit') Submit
+    
+
+    

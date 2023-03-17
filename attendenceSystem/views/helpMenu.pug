@@ -1,0 +1,44 @@
+extends layout
+include mixins/sidebar.pug
+
+block content
+  helpMenu
+    h1.enterance Help Menu
+      br
+      br
+      a(href="#createClass") How to Create a Class?
+      br
+      a(href="#createStudentAccount") How to Create a Student Account?
+      br
+      a(href="#createEvent") How to Create an Event?
+      br
+      a(href="#markAttendance") How to Mark Attendance in my Event?
+      br
+      a(href="#selectWinner") How to Select a Winner?
+      br
+      a(href="#createReport") How to Create a Report?
+      br
+  
+  div(id="createClass")
+  h3 How to Create a Class?
+  h4 You can create a class by clicking the Create Class Button on the top navigation bar
+  br
+  div(id="createStudentAccount")
+  h3 How to Create a Student Account?
+  h4 You can create a student account by clicking the Create Student account link on the top navigation bar
+  br
+  div(id="createEvent")
+  h3 How to Create an Event?
+  h4 You can create an event by clicking the Create Event link on the top navigation bar
+  br
+  div(id="markAttendance")
+  h3 How to Mark Attendance in my Event?
+  h4 You can mark attendance in the create event view by toggling the checkbox right next to the student name in the table
+  br
+  div(id="selectWinner")
+  h3 How to Select a Winner?
+  h4 You can select a winner by going to the leaderboard page and clicking the generate winner button
+  br
+  div(id="createReport")
+  h3 How to Create a Report?
+  h4 You can create a report by pressing the create report link on the top of the top navigation bar

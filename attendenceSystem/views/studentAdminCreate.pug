@@ -1,0 +1,25 @@
+extends layoutLoginRegister
+include mixins/sidebar.pug
+
+block content
+  h1 Create a new Student Account
+
+  form(action='/admin/createStudent', method ='POST')
+    
+          h2 Email
+          input(type="text", name="email", value=email, placeholder = 'Enter in Email')
+  
+
+          h2 First Name
+          input(type="text",  name="firstName", value=firstName, placeholder = 'Enter in First Name')
+  
+ 
+          h2 Last Name
+          input( type="text", name="lastName", value=lastName, placeholder = 'Enter in Last Name')
+
+
+          h2 Grade
+          input( type="number", name="grade", value=grade, placeholder = 'Enter Grade')
+
+
+          button.btn.btn-primary(type='submit') Submit

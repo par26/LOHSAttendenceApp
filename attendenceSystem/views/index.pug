@@ -1,0 +1,29 @@
+extends layout
+
+block bg
+
+block header
+   header
+      nav
+        h1#title-name.title-name Attendance Project for FBLA
+        ul
+          li.nav-item
+            a#nav-link.nav-link(href="/studentLogin", class="menuBar") Student Login
+          li.nav-item
+            a#nav-link.nav-link(href= "/createAccount", class = "menuBar") Register
+
+block content
+  content
+    section.mainBody
+      h1
+        span.lohs LOHS Chapter
+        br
+        span.tracker Engagement Tracker
+      p
+        span.desc An online tracker for teachers to give points to students as well as make tasks easier.
+      h2
+        br
+        br
+        span.lohs Admin/Teacher? Log in Below!
+      a.btn.red(href="/login") Teacher Login
+      a.btn.red(href="/createAccount") Register

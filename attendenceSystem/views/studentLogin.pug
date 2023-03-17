@@ -1,0 +1,20 @@
+extends layoutLoginRegister
+
+block content
+
+  form(action='/studentLogin', method ='POST')
+          h1 Student Login
+          br
+          h2 Email
+          label(for = "email")
+          input(type="text", name="email", value=email, placeholder = 'Enter in Email')
+
+          button.btn.btn-primary(type='submit') Submit
+
+  
+  if error
+    p #{error}
+
+  a(href="/login") Teacher? Click here!
+
+  a(href="/createAccount") Don't have an account? Click here!

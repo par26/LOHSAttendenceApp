@@ -1,0 +1,34 @@
+Leaderboard:
+1. Pratush Agrawal 30 points
+2. Micheal Do 25 points
+3. George Wong 20 points
+4. Test ing 20 points
+5. Bob Zhou 15 points
+6. new  student 5 points
+7. Dylan Wong 5 points
+8. Micheal Wong 5 points
+Leaderboard:
+1. Testing:
+this is testing, I love testing
+Number of Students: 5
+2. Tennis Match:
+Los Osos vs. Alta Loma
+Number of Students: 5
+3. Basketball Game:
+Los Osos vs. Etiwanda
+Number of Students: 4
+4. Tennis Match:
+Etiwanda vs Los Osos
+Number of Students: 4
+5. Basketball:
+Los Osos vs Etiwanda
+Number of Students: 3
+6. Basketball Game:
+Los Osos vs. Chino Hills
+Number of Students: 3
+7. Basketball:
+Los Osos vs. Etiwanda
+Number of Students: 0
+8. Basketball:
+Los Osos vs Etiwanda
+Number of Students: 0

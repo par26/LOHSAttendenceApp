@@ -1,0 +1,32 @@
+extends layoutLoginRegister
+
+block content
+
+  form(action='/login', method ='POST')
+          h1 Admin Login
+          br
+          h2 Email
+          input(type="text", name="email", value=email, placeholder = 'Enter in Email')
+  
+
+          h2 Password
+          input(type="password",  name="password", value=firstName, placeholder = 'Enter in Password')
+  
+ 
+         
+
+          button.btn.btn-primary(type='submit') Submit
+
+
+
+
+  if error
+    p #{error}
+
+  
+  a(href="/studentLogin") Student? Click here!
+
+  a(href="/createAccount") Don't have an account? Click here!
+
+
+

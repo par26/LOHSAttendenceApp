@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+
+    table
+        thead
+          th First Name 
+          th Last Name
+          th Grade
+          th Points
+      
+        tbody
+          each student in students
+            tr
+              td #{student.firstName}
+              td #{student.lastName}
+              td #{student.grade}
+              td #{student.points}
+      
+ 

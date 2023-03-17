@@ -1,0 +1,38 @@
+extends layoutLoginRegister
+
+block content
+  h1 Create a Student Account
+  br
+
+  form(action='/createStudentAccount', method ='POST')
+    
+          h2 Email
+          label(for = "email")
+          input(type="text", name="email", value=email, placeholder = 'Enter in Email')
+  
+
+          h2 First Name
+          input(type="text",  name="firstName", value=firstName, placeholder = 'Enter in First Name')
+  
+ 
+          h2 Last Name
+          input( type="text", name="lastName", value=lastName, placeholder = 'Enter in Last Name')
+
+
+          h2 Grade
+          input( type="number", name="grade", value=grade, placeholder = 'Enter Grade')
+
+
+          h2 Class Code
+          input( type="classCode",  name="classCode", value=classCode,  placeholder = 'Enter in Class Code')
+
+          button.btn.btn-primary(type='submit') Submit
+
+  
+  if error
+    p #{error}
+
+
+
+  if error
+    p #{error}

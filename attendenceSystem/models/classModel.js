@@ -21,4 +21,3 @@ const ClassSchema = Schema ({
 
 //exports the class schema to the database
 module.exports = mongoose.model("Class", ClassSchema);
-

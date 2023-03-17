@@ -1,8 +1,175 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* CSS Variables */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --primary-color: #ffffff;
+  --secondary-color: #40b800;
+  --title-color: #3c8514;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+/* Smooth scroll effect */
+html {
+    background: url("../images/bg.png") no-repeat top center/cover;
+  scroll-behavior: smooth;
+        background-color: #72a31a;
+  color: var(--primary-color);
+
+}
+
+.title-name {
+  color: var(--title-color);
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+ body {
+  font-family: "Roboto", sans-serf;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+nav {
+  background: #141414;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 3px 2px #424242;
+
+  
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+} 
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  font-weight: var(--bold-font);
+}
+
+content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.9rem;
+  max-width: 1100px;
+  margin: 8rem auto -6rem;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text h3 {
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  line-height: var(--line-height);
+}
+
+.lohs {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.desc {
+  color: var(--primary-color);
+  
+}
+
+.tracker {
+    font-size: 2rem;
+
+  color: var(--title-color);
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 0.6rem;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.red {
+  background-color: var(--title-color);
+  margin-right: 1.5rem;
+}
+
+.red:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.welcome, .lb, th
+{
+  color: #fff;
+}
+
+
+.divEventElements
+{
+  border: 5px outset #282d25;
+  background-color: #9aa597;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  height: 400px;
+  display: inline-block; /* equal height of the children */
+}
+
+helpMenu{
+  text-align: center;
+}
+
+.enterance{
+  text-align: center;
+}
+
+
+.eventCreated{
+  text-align: center;
+  margin: auto;
+}
+
+
+
+
+
 }

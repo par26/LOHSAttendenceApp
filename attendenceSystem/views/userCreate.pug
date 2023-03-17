@@ -1,0 +1,30 @@
+extends layoutLoginRegister
+
+
+block content
+  h1 Create an Admin Account
+  br
+
+  form(action='/createAccount', method ='POST')
+    
+          h2 Email
+          input(type="text", name="email", value=email, placeholder = 'Enter in Email')
+  
+
+          h2 First Name
+          input(type="text",  name="firstName", value=firstName, placeholder = 'Enter in First Name')
+  
+ 
+          h2 Last Name
+          input( type="text", name="lastName", value=lastName, placeholder = 'Enter in Last Name')
+  
+
+          h2 Password
+          input( type="password",  name="password", value=password,  placeholder = 'Enter in Password')
+
+          button.btn.btn-primary(type='submit') Submit
+
+  
+  if error
+    p #{error}
+

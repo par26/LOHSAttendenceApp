@@ -1,0 +1,24 @@
+extends layout.pug
+include mixins/sidebar.pug
+
+block header
+  +sidebar()
+
+block content
+  h2 
+    span.welcome Welcome, #{admin.first_name}!
+
+  h1.lb All Events
+
+  if events.length > 0
+    each event in events
+      .divEventElements
+        h2 #{event.name}
+        h3 "Event Type: " #{event.event_type}
+        p #{event.description}
+        h3 "Event Date: " #{event.date}
+        h3 #{event.start_time}
+        h3 #{event.end_time}
+
+        
+      //displaying event.name, event.description, event.date, event.start_time, event.end_time, event_type

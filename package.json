@@ -14,10 +14,14 @@
     "async": "^3.2.4",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "http-errors": "^2.0.0",
+    "jsdoc": "^4.0.2",
     "mongoose": "^6.7.3",
     "morgan": "^1.10.0",
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.2.6",
+    "pug": "^3.0.2",
+    "sprintf-js": "^1.1.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

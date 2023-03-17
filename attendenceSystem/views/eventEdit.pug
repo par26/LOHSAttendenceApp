@@ -1,0 +1,58 @@
+extends layout
+include mixins/sidebar.pug
+
+
+block content
+  h1 Create Event
+
+
+
+  form(action="/admin/createEvent", method='POST')
+
+    label(for = "eventName") Event Name:
+    input(type="text", name="name", value=name, placeholder = 'Enter the event name')
+    br
+    label(for="description") Event Description:
+    br
+    textArea(name="description", cols="20", rows="10")
+    br
+    label(for = "points") Points:
+    input(type="number", name="points", value=point, placeholder = 'Enter the number of points')
+    br
+    label(for = "startTime") Select the Start Time of the Event:
+    input(type="time", name="startTime", value="startTime")
+    br
+    label(for="endTime") Select the Ending Time of the Event:
+    input(type="time", name="endTime", value="endTime")
+    br
+    label(for="eventType") Event Type:
+    br
+    select(name="eventType")
+        option Sporting
+        option Non-Sporting
+
+    br
+    if students
+        h2 Mark Attendance:  
+          table
+              thead
+                  th First Name
+                  th Last Name
+                  th Grade
+                  th Points
+                  th Select
+              tbody
+                  each student in students
+                      tr
+                        td #{student.firstName}
+                        td #{student.lastName}
+                        td #{student.grade}
+                        td #{student.points}           
+                        td input(type='checkbox', id ="student:${student._id}, name =student._id)
+
+    br
+    //submit button
+    button.btn.btn-primary(type='submit') Submit
+    
+
+    
