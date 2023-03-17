@@ -1,6 +1,9 @@
 extends layout
 include mixins/sidebar.pug
 
+block header
+  +sidebar()
+
 block content
   helpMenu
     h1.enterance Help Menu
@@ -18,27 +21,30 @@ block content
       br
       a(href="#createReport") How to Create a Report?
       br
+      br
+      br
+      br
   
   div(id="createClass")
-  h3 How to Create a Class?
-  h4 You can create a class by clicking the Create Class Button on the top navigation bar
+  h2 How to Create a Class?
+  h3 You can create a class by clicking the Create Class Button on the top navigation bar
   br
   div(id="createStudentAccount")
-  h3 How to Create a Student Account?
-  h4 You can create a student account by clicking the Create Student account link on the top navigation bar
+  h2 How to Create a Student Account?
+  h3 You can create a student account by clicking the Create Student account link on the top navigation bar. You can enter in the email you want to be associated with this account, the name of the student, and the grade level.
   br
   div(id="createEvent")
-  h3 How to Create an Event?
-  h4 You can create an event by clicking the Create Event link on the top navigation bar
+  h2 How to Create an Event?
+  h3 You can create an event by clicking the Create Event link on the top navigation bar. Then, you want to create a name, which grants an infinite amount of possibilities for sport or non-sport related events. You can add a description so the students know what's happening, and you can add extra information. Along with this, you could add the starting time and ending time.
   br
   div(id="markAttendance")
-  h3 How to Mark Attendance in my Event?
-  h4 You can mark attendance in the create event view by toggling the checkbox right next to the student name in the table
+  h2 How to Mark Attendance in my Event?
+  h3 To mark attendance for events, you first need to create one. Then, you can mark it by toggling the checkbox right next to the student name in the table. It gives the students who attended the number of points you've assigned to that event.
   br
   div(id="selectWinner")
-  h3 How to Select a Winner?
-  h4 You can select a winner by going to the leaderboard page and clicking the generate winner button
+  h2 How to Select a Winner?
+  h3 You can select a winner by going to the leaderboard page and clicking the generate winner buttons. You can either generate the winner with the most points per quarter, or generate a winner randomly.
   br
   div(id="createReport")
-  h3 How to Create a Report?
-  h4 You can create a report by pressing the create report link on the top of the top navigation bar
+  h2 How to Create a Report?
+  h3 You can create a report by pressing the create report link on the top of the top navigation bar. It shows you all of your students with their ranking along with their points. It also tells you all the events you've hosted, along with the number of people who attended.

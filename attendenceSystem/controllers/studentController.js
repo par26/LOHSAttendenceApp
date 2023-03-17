@@ -1,4 +1,4 @@
-/** 
+ /** 
 * Student Controller
 *@module studentController
 */
@@ -33,6 +33,8 @@ exports.student_index = (req, res) => {
 
 
 //Display detailed info about student
+
+/*
 exports.student_get = (req, res) => {
   
   try {
@@ -46,6 +48,8 @@ exports.student_get = (req, res) => {
 
   //render with the student and the admin events as parameters
 }
+
+*/
 
 /**
  * @function student_create_get

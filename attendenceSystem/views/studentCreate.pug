@@ -1,4 +1,8 @@
-extends layoutLoginRegister
+extends layout
+include mixins/sidebar.pug
+
+block header
+  +sidebar()
 
 block content
   h1 Create a Student Account
@@ -29,10 +33,5 @@ block content
           button.btn.btn-primary(type='submit') Submit
 
   
-  if error
-    p #{error}
-
-
-
   if error
     p #{error}
