@@ -29,12 +29,11 @@ You can use the account test@gmail.com with the password 123.
 
 
 #Libaries Use
-
-#Express JS
+Express JS
 Used for routing the general sever of the program
 
-#Mongoose
+Mongoose
 Used for obtaining and retriving the data from the MongoDB database
 
-#PUG
+PUG
 Used for templating for frontend
