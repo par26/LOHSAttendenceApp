@@ -28,7 +28,7 @@ You can use the account test@gmail.com with the password 123.
 ![image](https://user-images.githubusercontent.com/67389873/225970299-430374ef-0e08-4387-a8fc-60b4ea75da9e.png)
 
 
-#Libaries Use
+Libaries Used
 Express JS
 Used for routing the general sever of the program
 
